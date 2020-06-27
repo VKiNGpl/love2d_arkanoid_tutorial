@@ -365,6 +365,7 @@ end
 function love.load()
    bricks.construct_level( levels.sequence[levels.current_level] )
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )
@@ -392,6 +393,12 @@ function love.keyreleased( key, code )
    if  key == 'escape' then
       love.event.quit()
    end    
+end
+
+function love.keypressed(key)
+   if key == 'escape' then
+      love.event.quit()
+   end
 end
 
 function love.quit()

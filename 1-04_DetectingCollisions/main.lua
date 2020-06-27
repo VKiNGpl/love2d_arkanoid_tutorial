@@ -43,7 +43,7 @@ function platform.draw()
 			    platform.position_x,
 			    platform.position_y,
 			    platform.width,
-			    platform.height )   
+			    platform.height )
 end
 
 
@@ -258,10 +258,14 @@ function collisions.platform_walls_collision()
    end
 end
 
+function love.conf(t)
+	t.console = true
+end
 
 function love.load()
    bricks.construct_level()
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )
@@ -283,6 +287,12 @@ function love.keyreleased( key, code )
    if  key == 'escape' then
       love.event.quit()
    end    
+end
+
+function love.keypressed(key)
+   if ky == 'escape' then
+      love.event.quit()
+   end
 end
 
 function love.quit()

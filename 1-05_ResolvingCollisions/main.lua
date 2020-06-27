@@ -2,8 +2,8 @@
 local ball = {}
 ball.position_x = 300
 ball.position_y = 300
-ball.speed_x = 700
-ball.speed_y = 700
+ball.speed_x = 400
+ball.speed_y = 400
 ball.radius = 10
 
 function ball.update( dt )
@@ -133,6 +133,7 @@ end
 
 function bricks.brick_hit_by_ball( i, brick, shift_ball_x, shift_ball_y )
    table.remove( bricks.current_level_bricks, i )
+   print('brick ' .. i .. ' on position \tx: ' .. brick.position_x .. ', \ty: ' .. brick.position_y .. ' removed!')
 end
 
 -- Walls 
@@ -309,10 +310,10 @@ function collisions.platform_walls_collision()
    end
 end
 
-
 function love.load()
    bricks.construct_level()
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )
@@ -334,6 +335,12 @@ function love.keyreleased( key, code )
    if  key == 'escape' then
       love.event.quit()
    end    
+end
+
+function love.keypressed(key)
+   if key == 'escape' then
+      love.event.quit()
+   end
 end
 
 function love.quit()

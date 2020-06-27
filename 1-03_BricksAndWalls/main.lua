@@ -83,15 +83,15 @@ end
 function bricks.construct_level()
    for row = 1, bricks.rows do
       for col = 1, bricks.columns do
-	 local new_brick_position_x = bricks.top_left_position_x +
-	    ( col - 1 ) *
-	    ( bricks.brick_width + bricks.horizontal_distance )
-	 local new_brick_position_y = bricks.top_left_position_y +
-	    ( row - 1 ) *
-	    ( bricks.brick_height + bricks.vertical_distance )
-	 local new_brick = bricks.new_brick( new_brick_position_x,
-					     new_brick_position_y )
-	 bricks.add_to_current_level_bricks( new_brick )
+	      local new_brick_position_x = bricks.top_left_position_x +
+	         ( col - 1 ) *
+	         ( bricks.brick_width + bricks.horizontal_distance )
+	      local new_brick_position_y = bricks.top_left_position_y +
+	         ( row - 1 ) *
+	         ( bricks.brick_height + bricks.vertical_distance )
+	      local new_brick = bricks.new_brick( new_brick_position_x,
+				   new_brick_position_y )
+	      bricks.add_to_current_level_bricks( new_brick )
       end      
    end   
 end
@@ -175,8 +175,8 @@ function walls.draw()
    end
 end
 
-
 function love.load()
+   love.window.setTitle('Arcanoid')
    bricks.construct_level()
    walls.construct_walls()
 end
@@ -193,6 +193,12 @@ function love.draw()
    platform.draw()
    bricks.draw()
    walls.draw()
+end
+
+function love.keypressed(key)
+   if key == 'escape' then
+      love.event.quit()
+   end
 end
 
 function love.quit()

@@ -20,7 +20,6 @@ function ball.draw()
 			 segments_in_circle )   
 end
 
-
 -- Platform
 local platform = {}
 platform.position_x = 500
@@ -87,7 +86,8 @@ function bricks.draw()
 end
 
 
-function love.load()   
+function love.load()
+   love.window.setTitle('Arkanoid')
    bricks.add_to_current_level_bricks(
       bricks.new_brick( 100, 100 ))
    bricks.add_to_current_level_bricks(
@@ -111,7 +111,11 @@ function love.draw()
    platform.draw()
    bricks.draw()
 end
-
+function love.keypressed(key)
+   if key == 'escape' then
+      love.event.quit()
+   end
+end
 function love.quit()
   print("Thanks for playing! Come back soon!")
 end
