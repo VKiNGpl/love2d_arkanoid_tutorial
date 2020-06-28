@@ -236,7 +236,7 @@ function collisions.check_rectangles_overlap( a, b )
    return overlap, x_shift, y_shift
 end
 
-local function overlap_along_axis( a_pos, b_pos, a_size, b_size )
+function overlap_along_axis( a_pos, b_pos, a_size, b_size )
    local diff = b_pos - a_pos
    local dist = math.abs( diff )
    local overlap = ( a_size + b_size ) / 2 - dist
@@ -332,6 +332,7 @@ end
 function love.load()
    bricks.construct_level( levels.sequence[levels.current_level] )
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )
