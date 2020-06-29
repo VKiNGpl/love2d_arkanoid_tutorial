@@ -8,6 +8,7 @@ local levels = require "levels"
 function love.load()
    bricks.construct_level( levels.sequence[levels.current_level] )
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )
