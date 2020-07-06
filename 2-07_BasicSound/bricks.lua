@@ -26,7 +26,7 @@ local armored_break_sound = love.audio.newSource(
    "sounds/armored_glass_break_short_norm.ogg",
    "static")
 local ball_heavyarmored_sound = love.audio.newSource(
-   "sounds/cast_iron_clangs_11_short_norm.ogg",
+   "sounds/Ancient_Game_Hammer_Hit_2.wav",
    "static")
 
 function bricks.new_brick( position, width, height, bricktype )
