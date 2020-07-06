@@ -9,6 +9,7 @@ function love.load()
    level = levels.require_current_level()
    bricks.construct_level( level )
    walls.construct_walls()
+   love.window.setTitle('Arkanoid')
 end
  
 function love.update( dt )

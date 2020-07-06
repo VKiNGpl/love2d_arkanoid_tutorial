@@ -33,11 +33,11 @@ function bricks.draw_brick( single_brick )
 			    single_brick.height )
    local r, g, b, a = love.graphics.getColor( )
    if single_brick.bricktype == 1 then
-      love.graphics.setColor( 255, 0, 0, 100 )
+      love.graphics.setColor( 1, 0, 0, 0.393 )
    elseif single_brick.bricktype == 2 then
-      love.graphics.setColor( 0, 255, 0, 100 )
+      love.graphics.setColor( 0, 1, 0, 0.393 )
    elseif single_brick.bricktype == 3 then
-      love.graphics.setColor( 0, 0, 255, 100 )
+      love.graphics.setColor( 0, 0, 1, 0.393 )
    end
    love.graphics.rectangle( 'fill',
 			    single_brick.position.x,

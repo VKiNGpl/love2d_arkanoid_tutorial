@@ -22,7 +22,7 @@ function walls.draw_wall( single_wall )
 			    single_wall.width,
 			    single_wall.height )
    local r, g, b, a = love.graphics.getColor( )
-   love.graphics.setColor( 255, 0, 0, 100 )
+   love.graphics.setColor( 1, 0, 0, 0.4 )
    love.graphics.rectangle( 'fill',
 			    single_wall.position.x,
 			    single_wall.position.y,

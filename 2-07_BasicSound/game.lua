@@ -14,10 +14,10 @@ end
 function game.enter( prev_state, ... )
    local args = ...
    if prev_state == "gamepaused" then
-      music:resume()
+      music:play()
    end
    if prev_state == "gamefinished" then
-      music:rewind()
+      music:seek(0)
    end
    if args and args.current_level then
       bricks.clear_current_level_bricks()

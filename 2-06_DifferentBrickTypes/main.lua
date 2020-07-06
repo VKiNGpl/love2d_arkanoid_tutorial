@@ -11,6 +11,7 @@ end
 
 function love.update( dt )
    gamestates.state_event( "update", dt )
+   love.window.setTitle('Arkanoid')
 end
 
 function love.draw()

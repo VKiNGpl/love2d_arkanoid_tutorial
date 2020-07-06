@@ -7,6 +7,7 @@ function love.load()
                         love_window_height,
                         { fullscreen = false } )
    gamestates.set_state( "menu" )
+   love.window.setTitle('Arkanoid')
 end
 
 function love.update( dt )

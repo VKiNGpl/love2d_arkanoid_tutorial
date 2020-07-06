@@ -1,6 +1,6 @@
 gamestates = require "gamestates"
 
-music = love.audio.newSource( "sounds/S31-Night Prowler.ogg" )
+music = love.audio.newSource( 'sounds/tecno_hydronium.ogg', 'static' )
 music:setLooping( true )
 
 function love.load()
@@ -10,6 +10,7 @@ function love.load()
                         love_window_height,
                         { fullscreen = false } )
    gamestates.set_state( "menu" )
+   love.window.setTitle('Arkanoid')
 end
 
 function love.update( dt )

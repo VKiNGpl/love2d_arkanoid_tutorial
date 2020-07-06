@@ -2,6 +2,7 @@ gamestates = require "gamestates"
 
 function love.load()
    gamestates.set_state( "menu" )
+   love.window.setTitle('Arkanoid')
 end
 
 function love.update( dt )
