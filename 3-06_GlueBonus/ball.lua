@@ -180,7 +180,7 @@ end
 function ball.check_escape_from_screen()
    local x, y = ball.position:unpack()
    local ball_top = y - ball.radius
-   if ball_top > love.graphics.getHeight() then
+   if ball_top > love.graphics.getHeight() +100 then
       ball.escaped_screen = true
    end
 end
