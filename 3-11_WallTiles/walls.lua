@@ -114,9 +114,9 @@ function walls.draw_wall( single_wall )
 			    single_wall.width,
 			    single_wall.height )
    local r, g, b, a = love.graphics.getColor( )   
-   love.graphics.setColor( 255, 0, 0, 100 )
+   love.graphics.setColor( 1, 0, 0, 0.4 )
    if single_wall.next_level_bonus then
-      love.graphics.setColor( 0, 0, 255, 100 )
+      love.graphics.setColor( 0, 0, 1, 0.4 )
    end
    love.graphics.rectangle( 'fill',
 			    single_wall.position.x,

@@ -242,7 +242,7 @@ function balls.check_balls_escaped_from_screen()
    for i, single_ball in pairs( balls.current_balls ) do
       local x, y = single_ball.position:unpack()
       local ball_top = y - single_ball.radius
-      if ball_top > love.graphics.getHeight() then
+      if ball_top > love.graphics.getHeight() + 100 then
 	 table.remove( balls.current_balls, i )
       end
    end

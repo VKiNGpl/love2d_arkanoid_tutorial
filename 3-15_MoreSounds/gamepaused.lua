@@ -29,7 +29,7 @@ end
 
 function gamepaused.cast_shadow()
    local r, g, b, a = love.graphics.getColor( )
-   love.graphics.setColor( 10, 10, 10, 100 )
+   love.graphics.setColor( 0.04, 0.04, 0.04, 0.4 )
    love.graphics.rectangle("fill",
 			   0,
 			   0,
