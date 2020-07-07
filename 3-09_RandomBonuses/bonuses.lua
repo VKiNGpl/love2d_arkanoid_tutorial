@@ -151,6 +151,7 @@ function bonuses.generate_bonus( position, bonustype )
    if bonuses.valid_bonustype( bonustype ) then
       bonuses.add_bonus( bonuses.new_bonus( position, bonustype ) )
    end
+   print( bonustype )
 end
 
 function bonuses.valid_bonustype( bonustype )
@@ -165,7 +166,7 @@ local bonustype_rng = love.math.newRandomGenerator( os.time() )
 
 function bonuses.random_bonustype()
    local bonustype
-   local prob = bonustype_rng:random( 400 )
+   local prob = bonustype_rng:random( 1, 400 )
    if prob == 400 then
       bonustype = bonuses.choose_random_valuable_bonus()
    elseif prob >= 360 then
